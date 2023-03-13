@@ -5,7 +5,23 @@
   justify-content: center;
   width: 100%;
 }
+
 .inner {
   height: 100%;
   width: var(--default-layout-width);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
 }
+.search {
+  width: 361px;
+}
+
+.clear {}
+
+.loading {}
+
+.search-btn {}
+
+.action {}
