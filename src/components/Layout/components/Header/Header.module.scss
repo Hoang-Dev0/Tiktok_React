@@ -1,7 +1,7 @@
 .wrapper {
   --search-border-radius: 92px;
   --search-height: 46px;
-  --search-top-spacer: 9px;
+  --search-top-spacer: 7px;
   --search-button-width: 52px;
 
   height: var(--default-layout-header-height);
@@ -19,7 +19,9 @@
   justify-content: space-between;
 
 }
+
 .search {
+  position: relative;
   width: 361px;
   height: var(--search-height);
   padding-left: 16px;
@@ -28,25 +30,61 @@
   background-color: rgba(22, 24, 35, 0.06);
   border-radius: var(--search-border-radius);
   border: 1.5px solid transparent;
-  
-  &:focus-within{
-    border-color: red;
+
+  &:focus-within {
+    border-color: #c5c6c9;
   }
-  
+
   input {
     flex: 1;
     height: 100%;
     font-size: 1.6rem;
     background-color: transparent;
     cursor: pointer;
+    caret-color: rgba(254, 44, 85, 1);
+  }
+
+  input:not(:placeholder-shown)~.search-btn {
+    color: rgba(22, 24, 35, 0.75);
+  }
+
+  &::after {
+    content: '';
+    width: 1px;
+    top: var(--search-top-spacer);
+    bottom: var(--search-top-spacer);
+    background-color: rgba(22, 24, 35, .12);
+    position: absolute;
+    right: var(--search-button-width);
+
   }
 
 }
 
-.clear {}
+.clear,
+.loading {
+  width: 40px;
+  color: rgba(22, 24, 35, 0.34);
+}
 
-.loading {}
+.loading {
+  display: none;
+}
 
-.search-btn {}
+.search-btn {
+  width: var(--search-button-width);
+  color: rgba(22, 24, 35, 0.34);
+  font-size: 1.8rem;
+  height: 100%;
+  border-top-right-radius: var(--search-border-radius);
+  border-bottom-right-radius: var(--search-border-radius);
+
+  &:hover,
+  &:active {
+    cursor: pointer;
+    background-color: rgba(22, 24, 35, .03);
+  }
+
+}
 
 .action {}
