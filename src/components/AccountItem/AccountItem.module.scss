@@ -1,0 +1,41 @@
+.wrapper {
+  padding: 9px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  &:hover {
+    background-color: var(--light-grey);
+    transition: background-color 0.4s;
+  }
+}
+
+.avatar {
+  --square: 40px;
+  width: var(--square);
+  height: var(--square);
+  object-fit: cover;
+  border-radius: 10rem;
+}
+
+.info {
+  flex: 1;
+}
+
+.name {
+  font-size: 1.6rem;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.check {
+  margin-left: 6px;
+  color: rgb(32, 213, 236);
+}
+
+.username {
+  font-size: 1.4rem;
+  color: var(--light-text-color);
+  line-height: 20px;
+}
