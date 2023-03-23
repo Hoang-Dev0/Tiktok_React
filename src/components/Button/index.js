@@ -24,6 +24,8 @@ function Button({
 }) {
     let Component = 'button';
 
+    console.log('to', to);
+
     const props = {
         onClick,
         ...passProps,

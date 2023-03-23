@@ -72,6 +72,11 @@
   font-weight: 500;
 }
 
+.action {
+  display: flex;
+  align-items: center;
+}
+
 .clear,
 .loading {
   width: 40px;
@@ -96,4 +101,11 @@
     background-color: rgba(22, 24, 35, .03);
   }
 
+}
+
+.more-btn {
+  font-size: 2rem;
+  margin-left: 16px;
+  padding: 4px 8px;
+  background-color: transparent;
 }
